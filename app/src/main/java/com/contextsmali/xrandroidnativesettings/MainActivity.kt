@@ -14,7 +14,7 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
 
         showLongToast(
-            "Press Open on this window to open Settings."
+            "Press Open"
         )
 
         goToSettings()
