@@ -16,12 +16,6 @@ Package:
 
 ## Local requirements
 
-The Android SDK is NOT required on the computer that
-generates this project.
-
-The generated project is intended to be built by
-GitHub Actions.
-
 ## GitHub Actions
 
 Every push to `main` or `master` triggers the build.
@@ -40,19 +34,7 @@ Download it from:
 
 GitHub -> Actions -> Build Android APK -> android-apk
 
-## ProGuard / R8
-
-Release builds use:
-
-    app/proguard-rules.pro
-
-The configuration is referenced from:
-
-    app/build.gradle.kts
-
 ## Local build
-
-If you later install the Android SDK and JDK 17:
 
 Windows:
 
@@ -61,4 +43,3 @@ Windows:
 Linux/macOS:
 
     ./gradlew assembleDebug
-
