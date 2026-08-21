@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+
   pull_request:
     branches:
       - main
+
   workflow_dispatch:
 
 jobs:
@@ -23,8 +25,10 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Make Gradle executable
-        run: chmod +x ./gradlew
+      - name: Fix Gradle wrapper line encodings lmao
+        run: |
+          sed -i 's/\r$//' ./gradlew
+          chmod +x ./gradlew
 
       - name: Build APK
         run: ./gradlew assembleDebug
